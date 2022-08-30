@@ -36,7 +36,7 @@ jobs:
        - name: Upload Build Artifact(youtube)
          uses: actions/upload-artifact@v3
          with:
-           name: revanced-youtube
+           name: rez-ytb
            path: |
             revanced-*-non-root.apk
             vanced-microg.apk
@@ -51,21 +51,8 @@ jobs:
        - name: Upload Build Artifact(YouTube-Music)
          uses: actions/upload-artifact@v3
          with:
-           name: revanced-music
+           name: rez-music
            path: revanced-music-*-non-root.apk
-
-       - name: Build reddit variant
-         run: |
-          curl -OL https://github.com/XDream8/revanced-creator/releases/download/keystores/revanced-creator-reddit.keystore
-          export additional_args="--keystore=revanced-creator-reddit.keystore"
-          export what_to_patch="reddit"
-          sh -c "$(curl https://raw.githubusercontent.com/XDream8/revanced-creator/main/patch.sh)"
-
-       - name: Upload Build Artifact(Reddit)
-         uses: actions/upload-artifact@v3
-         with:
-           name: revanced-reddit
-           path: revanced-reddit-*-non-root.apk
 
        - name: Build twitter variant
          run: |
@@ -77,7 +64,7 @@ jobs:
        - name: Upload Build Artifact(Twitter)
          uses: actions/upload-artifact@v3
          with:
-           name: revanced-twitter
+           name: rez-twitter
            path: revanced-twitter-*-non-root.apk
 
        - name: Build tiktok variant
@@ -88,5 +75,5 @@ jobs:
        - name: Upload Build Artifact(TikTok)
          uses: actions/upload-artifact@v3
          with:
-           name: revanced-tiktok
+           name: rez-tiktok
            path: revanced-tiktok-*-non-root.apk
