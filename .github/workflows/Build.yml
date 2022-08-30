@@ -76,4 +76,4 @@ jobs:
          uses: actions/upload-artifact@v3
          with:
            name: rez-tiktok
-           path: revanced-tiktok-*-non-root.apk
+           path: rez-tiktok-*-non-root.apk
